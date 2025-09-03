@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Websites</title>
+    <!-- External Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f4f4f9;
             margin: 0;
             padding: 0;
@@ -18,68 +19,86 @@
         header {
             background-color: #007BFF;
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            border-bottom: 5px solid #0056b3;
         }
 
         h1 {
             margin: 0;
+            font-size: 36px;
         }
 
         .container {
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap;  /* Added this to allow wrapping on smaller screens */
+            flex-wrap: wrap;
             padding: 30px;
         }
 
         .website-card {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 22%; /* Set width to fit 4 cards on larger screens */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 22%;
             text-align: center;
-            margin: 10px;
+            margin: 15px;
             box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .website-card h3 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #333;
+            font-weight: 600;
         }
 
         .website-card a {
             text-decoration: none;
             color: #007BFF;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 18px;
         }
 
         .website-card a:hover {
             text-decoration: underline;
+            color: #0056b3;
+        }
+
+        .website-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .website-card i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #007BFF;
         }
 
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #333;
             color: white;
             position: fixed;
             width: 100%;
             bottom: 0;
+            font-size: 14px;
         }
 
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .website-card {
-                width: 45%; /* Cards will take up more space on smaller screens */
+                width: 45%;
             }
         }
 
         @media (max-width: 480px) {
             .website-card {
-                width: 90%; /* Cards will stack in full width on very small screens */
-                margin: 10px auto; /* Center the cards */
+                width: 90%;
+                margin: 15px auto;
             }
 
             .container {
@@ -97,24 +116,28 @@
 <div class="container">
     <!-- Website 1 -->
     <div class="website-card">
+        <i class="fas fa-laptop-code"></i>
         <h3>Website 1</h3>
         <a href="https://example1.com" target="_blank">Visit Website 1</a>
     </div>
 
     <!-- Website 2 -->
     <div class="website-card">
+        <i class="fas fa-globe"></i>
         <h3>Website 2</h3>
         <a href="https://example2.com" target="_blank">Visit Website 2</a>
     </div>
 
     <!-- Website 3 -->
     <div class="website-card">
+        <i class="fas fa-briefcase"></i>
         <h3>Website 3</h3>
         <a href="https://example3.com" target="_blank">Visit Website 3</a>
     </div>
 
     <!-- Website 4 -->
     <div class="website-card">
+        <i class="fas fa-cogs"></i>
         <h3>Website 4</h3>
         <a href="https://example4.com" target="_blank">Visit Website 4</a>
     </div>
@@ -123,6 +146,11 @@
 <footer>
     <p>&copy; 2025 All Rights Reserved</p>
 </footer>
+
+<!-- Bootstrap JS (Optional for future functionality) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
