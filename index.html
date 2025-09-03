@@ -3,141 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Apps</title>
+    <title>My App Collection</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
         :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #388E3C;
-            --background-light: #f0f2f5;
-            --card-background: #ffffff;
-            --text-dark: #333333;
-            --text-light: #fefefe;
+            --dark-bg: #1A1A2E;
+            --card-bg: #2B2B48;
+            --accent-color: #E94560;
+            --text-light: #F4F4F9;
+            --subtle-text: #9A9A9A;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--background-light);
+            font-family: 'Lato', sans-serif;
+            background-color: var(--dark-bg);
             margin: 0;
             padding: 0;
+            color: var(--text-light);
             line-height: 1.6;
-            color: var(--text-dark);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .main-header {
-            background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
+            background: linear-gradient(135deg, var(--dark-bg), #2B2B48);
             padding: 80px 20px;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
         
-        .main-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            z-index: 1;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
         .main-header h1 {
             margin: 0;
             font-size: 3.5em;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .main-header p {
+            font-size: 1.2em;
+            font-weight: 400;
+            color: var(--subtle-text);
+            margin-top: 10px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
 
         .app-card {
-            background-color: var(--card-background);
+            background-color: var(--card-bg);
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
 
         .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            background-color: #3D3D61;
         }
 
         .app-icon {
-            font-size: 3em;
-            color: var(--primary-color);
+            font-size: 4em;
+            color: var(--accent-color);
             margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.1) rotate(10deg);
         }
 
         .app-card h3 {
             margin: 0 0 15px 0;
-            font-size: 1.5em;
-            font-weight: 600;
-            color: var(--text-dark);
+            font-size: 1.8em;
+            font-weight: 700;
         }
 
         .download-btn {
             display: inline-block;
             text-decoration: none;
             color: var(--text-light);
-            background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            padding: 12px 25px;
+            background-color: var(--accent-color);
+            padding: 15px 30px;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1em;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 15px;
         }
 
         .download-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            background-image: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            background-color: #FF5A73;
         }
 
         .footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: #999;
+            background-color: var(--card-bg);
+            color: var(--subtle-text);
             font-size: 0.9em;
+            border-top: 1px solid #3A3A5A;
         }
 
-        /* Mobile adjustments */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .main-header {
-                padding: 60px 15px;
-            }
             .main-header h1 {
                 font-size: 2.5em;
             }
-            .container {
-                padding: 20px 10px;
+            .app-card {
+                padding: 30px;
             }
         }
     </style>
@@ -145,9 +138,8 @@
 <body>
 
     <header class="main-header">
-        <div class="header-content">
-            <h1>Welcome to Our App Hub</h1>
-        </div>
+        <h1>App Downloads</h1>
+        <p>Explore our fantastic collection of apps.</p>
     </header>
 
     <div class="container">
