@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Websites</title>
+
     <!-- External Libraries -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -19,67 +21,73 @@
         header {
             background-color: #007BFF;
             color: white;
-            padding: 30px;
+            padding: 50px 0;
             text-align: center;
             border-bottom: 5px solid #0056b3;
         }
 
         h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 48px;
+            font-weight: 600;
         }
 
         .container {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding: 30px;
+            padding: 40px 30px;
         }
 
         .website-card {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             padding: 25px;
             width: 22%;
             text-align: center;
-            margin: 15px;
+            margin: 20px;
             box-sizing: border-box;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .website-card h3 {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #333;
             font-weight: 600;
+            font-size: 22px;
         }
 
         .website-card a {
+            display: inline-block;
             text-decoration: none;
-            color: #007BFF;
-            font-weight: 700;
-            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         .website-card a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        .website-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            background-color: #0056b3;
         }
 
         .website-card i {
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 40px;
+            margin-bottom: 15px;
             color: #007BFF;
+        }
+
+        .website-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
         }
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px 0;
             background-color: #333;
             color: white;
             position: fixed;
@@ -98,11 +106,19 @@
         @media (max-width: 480px) {
             .website-card {
                 width: 90%;
-                margin: 15px auto;
+                margin: 20px auto;
             }
 
             .container {
                 padding: 20px;
+            }
+
+            header {
+                padding: 30px 0;
+            }
+
+            h1 {
+                font-size: 32px;
             }
         }
     </style>
@@ -147,7 +163,7 @@
     <p>&copy; 2025 All Rights Reserved</p>
 </footer>
 
-<!-- Bootstrap JS (Optional for future functionality) -->
+<!-- Optional Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
