@@ -172,9 +172,20 @@
             <a href="https://dl.juwa777.com" class="download-btn">Download Now</a>
         </div>
     </div>
-    <button onclick="document.getElementById('rulesPhoto').style.display='block'">Rules</button>
 
-<img id="rulesPhoto" src="rulesphoto.jpg" style="display:none; max-width:100%;" oncontextmenu="return false;" draggable="false">
+    <button class="download-btn" onclick="document.getElementById('rulesPhoto').style.display='block'">
+    <i class="fas fa-book-open"></i> Rules
+</button>
+
+<img
+    id="rulesPhoto"
+    src="rulesphoto.jpg"
+    alt="Rules"
+    style="display:none; max-width:100%; user-select:none;"
+    oncontextmenu="return false;"
+    ondragstart="return false;"
+>
+
 
     <footer class="footer">
         <p>&copy; 2025 All Rights Reserved</p>
